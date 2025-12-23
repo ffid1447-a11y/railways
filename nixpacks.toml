@@ -1,0 +1,18 @@
+[phases.setup]
+cmds = [
+  "apt-get update",
+  "apt-get install -y python3 python3-pip",
+  "pip3 install --upgrade pip"
+]
+
+[phases.install]
+cmds = [
+  "npm install",
+  "pip3 install -r requirements.txt"
+]
+
+[phases.build]
+cmds = ["echo 'Build completed'"]
+
+[start]
+cmd = "node server.js"
