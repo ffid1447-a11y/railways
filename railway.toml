@@ -1,0 +1,18 @@
+[build]
+builder = "nixpacks"
+watchPatterns = ["server.js", "package.json", "requirements.txt"]
+
+[build.args]
+NODE_VERSION = "18"
+PYTHON_VERSION = "3.10"
+
+[deploy]
+startCommand = "node server.js"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+
+[variables]
+PORT = "3000"
+NODE_ENV = "production"
+ENCRYPTION_KEY = "nic@impds#dedup05613"
+PYTHON_PATH = "/usr/bin/python3"
