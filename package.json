@@ -1,0 +1,24 @@
+{
+  "name": "impds-railway-api",
+  "version": "5.0.0",
+  "description": "IMPDS Aadhaar Search API optimized for Railway.app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "railway-setup": "bash setup-railway.sh",
+    "railway-start": "bash start.sh",
+    "health": "node healthcheck.js",
+    "test": "jest --testTimeout=30000",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.3.1",
+    "node-cache": "^5.1.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression
